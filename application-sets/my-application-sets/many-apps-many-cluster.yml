@@ -14,7 +14,10 @@ spec:
               directories:
                 - path: application-sets/example-apps/*
           # cluster generator, 'child' #2
-          - clusters: *
+          - clusters:
+            - cluster-2
+            - cluster-3
+            - in-cluster
   template:
     metadata:
       name: '{{path.basename}}-{{name}}'
